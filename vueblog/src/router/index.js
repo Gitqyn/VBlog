@@ -8,6 +8,7 @@ import DataCharts from '@/components/DataCharts'
 import PostArticle from '@/components/PostArticle'
 import UserMana from '@/components/UserMana'
 import BlogDetail from '@/components/BlogDetail'
+import UserList from '@/components/UserList'
 
 Vue.use(Router)
 
@@ -96,6 +97,18 @@ export default new Router({
           iconCls: 'fa fa-bar-chart',
           name: '数据统计',
           component: DataCharts
+        }
+      ]
+    }, {
+      path: '/home',
+      component: Home,
+      name: '用户列表',
+      children: [
+        {
+          path: '/userList',
+          iconCls: 'fa fa-reorder',
+          name: '用户列表',
+          component: UserList
         }
       ]
     }
